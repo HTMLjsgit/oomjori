@@ -1,0 +1,149 @@
+/*
+	Theme Name: 大森さんブログ
+	Version: 1.0
+*/
+
+
+
+.menu{
+	display: flex;
+	justify-content: space-between;
+
+	padding-bottom: 20px;
+	margin: 0 auto;
+	max-width: 1000px;
+}
+
+.postAllBox{
+	justify-content: space-around;
+	flex-wrap: wrap;
+	display: flex;
+	max-width: 100%;
+}
+
+.menu li{
+	list-style: none;
+}
+.menu a{
+	text-decoration: none;
+	color: #fff;
+	padding-left: 10px;
+	padding-right: 10px;
+	border-left: 1px solid #fff;
+	border-right: 1px solid #fff;
+	transition: 0.2s;
+	opacity: 0.8;
+}
+
+.menu a:hover{
+	opacity: 1;
+	color: #33bad2;	
+}
+.thumbnailBox img{
+	width: 100%;
+	height: auto;
+}
+.singleBox{
+	width: 900px;
+}
+.postBox{
+	max-width: 300px;
+	margin-bottom: 20px;
+}
+
+.postAtag:hover{
+	transition: 1s ease opacity;
+	opacity: 0.5;
+}
+.postAtag{
+	text-decoration: none;
+	color: #000;
+}
+.sidebardisplayBox{
+	display: flex;
+
+}
+.postTitle{
+	font-size: 25px;
+}
+.singleTitleText{
+	font-size: 30px;
+	margin-bottom: 20px;
+}
+
+.bigBox h1{
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.top a{
+	color: #000;
+	text-decoration: none;
+}
+.menuBox{
+	margin: 0 auto;
+	background-color: #616161;
+}
+.body header{
+	margin-bottom: 50px;
+}
+.titleTop{
+	text-align: center;
+	font-size: 40px;
+	padding-bottom: 30px;
+	padding-top: 20px;
+	color: #fff;
+}
+.dateText{
+	font-family: '游ゴシック','Yu Gothic';
+	margin-bottom: 20px;
+}
+.body{
+    font-family: "Montserrat","游ゴシック",YuGothic,"ヒラギノ角ゴ ProN W3","Hiragino Kaku Gothic ProN","メイリオ",Meiryo,sans-serif;
+}
+.centerBox{
+	background-color: #fff;
+	margin: 0 auto;
+	max-width: 800px;
+}
+.thumbnailsingleBox img{
+	width: 100%;
+	height: 100%;
+}
+
+.sidebarBox{
+	max-width: 400px;
+	border-left: 1px solid #ddd;
+	position: sticky;
+	right: 0;
+	text-align: center;
+}
+
+#s{
+	width: 50%;
+}
+#searchform{
+	display: flex;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.sidebarBox li{
+	list-style: none;
+}
+.itiranBox h3{
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+@media screen and (max-width: 980px){
+
+	.sidebarBox{
+		display: block;
+	}
+	.sidebarAndcenterBox{
+		display: block;
+	}
+	.postAllBox{
+		display: flex;
+		width: 100%;
+	}
+}
