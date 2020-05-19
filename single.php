@@ -1,6 +1,5 @@
 <?php get_header(); ?>
 	<div class="sidebardisplayBox">
-
 		<?php if ( have_posts() ) : ?>
 		  <?php while( have_posts() ) : the_post(); ?>
 		      <div class="singleBox">
@@ -17,5 +16,6 @@
 		  	  </div>
 		  <?php endwhile;?>
 		<?php endif; ?>
+		<?php get_sidebar(); ?>
 	</div>
 <?php get_footer(); ?>

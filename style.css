@@ -5,7 +5,7 @@
 
 
 
-.menu{
+.nav .menu{
 	display: flex;
 	justify-content: space-between;
 
@@ -18,13 +18,16 @@
 	justify-content: space-around;
 	flex-wrap: wrap;
 	display: flex;
-	max-width: 100%;
+	width: 800px;
+}
+.smart_nav_links{
+	display: none;
 }
 
-.menu li{
+.nav  .menu li{
 	list-style: none;
 }
-.menu a{
+.nav  .menu a{
 	text-decoration: none;
 	color: #fff;
 	padding-left: 10px;
@@ -35,9 +38,12 @@
 	opacity: 0.8;
 }
 
-.menu a:hover{
+.nav  .menu a:hover{
 	opacity: 1;
 	color: #33bad2;	
+}
+.arciveBox a:hover{
+	cursor: default;
 }
 .thumbnailBox img{
 	width: 100%;
@@ -46,12 +52,15 @@
 .singleBox{
 	width: 900px;
 }
+.singleBox p{
+	word-break: break-all;
+}
 .postBox{
 	max-width: 300px;
 	margin-bottom: 20px;
 }
 
-.postAtag:hover{
+.postBox:hover{
 	transition: 1s ease opacity;
 	opacity: 0.5;
 }
@@ -65,21 +74,36 @@
 }
 .postTitle{
 	font-size: 25px;
+	max-width: 300px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
 }
 .singleTitleText{
 	font-size: 30px;
 	margin-bottom: 20px;
+	word-break: break-all;
 }
 
 .bigBox h1{
 	padding-top: 10px;
 	padding-bottom: 10px;
 }
+#searchsubmit{
+	border-radius: 5px;
+	border-radius: none;
+	outline: none;
+}
+
 .top a{
 	color: #000;
 	text-decoration: none;
 }
 .menuBox{
+	margin: 0 auto;
+	background-color: #616161;
+}
+.smartmenuBox{
 	margin: 0 auto;
 	background-color: #616161;
 }
@@ -103,7 +127,7 @@
 .centerBox{
 	background-color: #fff;
 	margin: 0 auto;
-	max-width: 800px;
+	max-width: 1000px;
 }
 .thumbnailsingleBox img{
 	width: 100%;
@@ -111,39 +135,244 @@
 }
 
 .sidebarBox{
-	max-width: 400px;
-	border-left: 1px solid #ddd;
+	max-width: 250px;
 	position: sticky;
 	right: 0;
-	text-align: center;
+	margin-left: 50px;
+}
+.itiranBox li{
+	max-width: 100%;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	border-bottom: 1px solid #ddd;
+}
+.itiranBox a{
+	text-decoration: none;
+	color: #000;
+	
+}
+.itiranBox a:hover{
+	text-decoration: underline;
 }
 
 #s{
-	width: 50%;
+	border: 1px solid #ddd;
+	border-radius:5px;
+	width: 100%;
+	font-size: 16px;
+	font-weight: bold;
+	outline: none;
+	background-color: #eee;
+}
+.screen-reader-text{
+	display: none;
 }
 #searchform{
+}
+#searchform div{
 	display: flex;
-	margin-top: 20px;
-	margin-bottom: 20px;
 }
 .sidebarBox li{
 	list-style: none;
 }
 .itiranBox h3{
-	margin-top: 20px;
-	margin-bottom: 20px;
+	padding-top: 20px;
+	background-color: ;
+	padding-bottom: 5px;
+	border-bottom: 3px solid #000;
+	margin-bottom: 10px;
+}
+.nav_links{
+	display: flex;
+	justify-content: space-around;
+}
+.nav_next{
+	width: 150px;
+
+}
+.nav_previous{
+	width: 150px;
+}
+.arciveBox{
+	text-align: center;
+	font-size: 23px;
+	font-weight: bold;
+	margin-bottom: 30px;
+}
+.arciveBox a{
+	text-decoration: none;
+	color: #000;
+	
+}
+.arciveBox li{
+	list-style: none;
+}
+.smartmenuBox{
+	display: none;
+
 }
 
 @media screen and (max-width: 980px){
 
+
+	.postAllBox{
+		display: flex;
+		width: 100%;
+	}
+	.itiranBox li{
+		text-align: center;
+	}
+	.thumbnailsingleBox img{
+		width: 100%;
+		height: 100%;
+	}
+	.smartNav .menu-mymenu-container{
+		padding-top: 50px;
+	}
 	.sidebarBox{
+		max-width: 150px;
+	}
+	.menuBox{
+		display: none;
+	}
+	.smartmenuBox{
 		display: block;
+		margin: 0 auto;
+		background-color: #616161;
+	}
+	.cp_cont {
+      height: 65vh;
+    }
+    .cp_offcm01 {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      display: inline-block;
+    }
+
+    /* menu */
+    .cp_offcm01 .cp_menu {
+
+      position: fixed;
+      top: 0;
+      right: -100vw;
+      width: 250px;
+      height: 100%;
+      cursor: pointer;
+      -webkit-transition: 0.53s transform;
+      transition: 0.53s transform;
+      -webkit-transition-timing-function: cubic-bezier(.38,.52,.23,.99);
+      transition-timing-function: cubic-bezier(.38,.52,.23,.99);
+      background-color: #b0e0e6;
+      opacity: 0.8;
+      z-index: 5;
+    }
+    .cp_offcm01 .cp_menu ul {
+
+      margin: 0;
+      padding: 0;
+    }
+    .cp_offcm01 .cp_menu li {
+
+      list-style: none;
+    }
+    .cp_offcm01 .cp_menu li a {
+
+      display: block;
+      padding: 20px;
+      text-decoration: none;
+      color: #000;
+      font-weight: bold;
+      font-size: 18px;
+      border-bottom: 1px solid #ffffff;
+
+    }
+
+    .cp_offcm01 #cp_toggle01 {
+      position: absolute;
+
+      display: none;
+      opacity: 0;
+    }
+    .cp_offcm01 #cp_toggle01:checked ~ .cp_menu {
+      -webkit-transform: translateX(-100vw);
+      transform: translateX(-100vw);
+
+    }
+    /* menu toggle */
+    .cp_offcm01 #cp_toggle01 ~ label {
+      background-image: url("img/menu_img.png");
+      background-size: cover;
+      width: 30px;
+      height: 30px;
+      display: block;
+      padding: 0.5em;
+      cursor: pointer;
+      -webkit-transition: 0.5s transform;
+      transition: 0.5s transform;
+      -webkit-transition-timing-function: cubic-bezier(.61,-0.38,.37,1.27);
+      transition-timing-function: cubic-bezier(.61,-0.38,.37,1.27);
+      text-align: center;
+      color: #fff;
+    }
+    .cp_offcm01 #cp_toggle01:checked ~ label {
+
+      -webkit-transform: translateX(-18em);
+      transform: translateX(-18em);
+    }
+    .cp_offcm01 #cp_toggle01 ~ label::before {
+
+      border-bottom: 3px solid white;
+      font-family: 'FontAwesome';
+      font-family: serif;
+      /*content: '\f0c9';*/
+      font-size: 2em
+    }
+    .cp_offcm01 #cp_toggle01:checked ~ label::before {
+
+      /*content: '\f00d';*/
+    }
+    /* contents */
+    .cp_contents {
+      color: #333333;
+      text-align: center;
+    }
+    #home_label{
+      position: fixed;
+      right: 1em;  
+      top: 60px;
+      z-index: 10;
+      background-color: #fff;
+    }
+}
+@media screen and (max-width: 480px){
+	.singleBox{
+		width: 100%;
+		height: 100%;
+	}
+	.nav_links{
+		display: none;
 	}
 	.sidebarAndcenterBox{
 		display: block;
 	}
-	.postAllBox{
-		display: flex;
+	.sidebardisplayBox{
+		display: block;
+	}
+	.sidebarBox{
 		width: 100%;
+		max-width: 100%;
+		margin-left: 0;
+		margin-top: 100px;
+	}
+	.itiranBox li{
+		max-width: 100%;
+	}
+	.smart_nav_links{
+		display: flex;
+		justify-content: space-around;
 	}
 }
