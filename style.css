@@ -27,6 +27,9 @@
 .nav  .menu li{
 	list-style: none;
 }
+.comments_template_smart_box{
+	display: none;
+}
 .nav  .menu a{
 	text-decoration: none;
 	color: #fff;
@@ -93,8 +96,18 @@
 	border-radius: 5px;
 	border-radius: none;
 	outline: none;
+	font-weight: bold;
+	box-shadow: 1.5px 1.5px 3px  rgba(0,0,0,0.4);
+	font-family: 游ゴシック, sans-serif;
+	color: #fff;
+	background-color: #12c74b;
+	width: 80px;
 }
-
+#searchsubmit:hover{
+	background-color:#0fab41;
+	cursor: pointer;
+	transition: background-color 0.5s ease;
+}
 .top a{
 	color: #000;
 	text-decoration: none;
@@ -118,7 +131,7 @@
 	color: #fff;
 }
 .dateText{
-	font-family: '游ゴシック','Yu Gothic';
+	font-family: '游ゴシック','Yu Gothic', sans-serif;
 	margin-bottom: 20px;
 }
 .body{
@@ -161,9 +174,10 @@
 #s{
 	border: 1px solid #ddd;
 	border-radius:5px;
-	width: 100%;
+	width: 90%;
 	font-size: 16px;
 	font-weight: bold;
+	font-family: 游ゴシック, sans-serif;
 	outline: none;
 	background-color: #eee;
 }
@@ -214,7 +228,74 @@
 	display: none;
 
 }
+.comment{
+	list-style:none;
+}
+label[for="comment"]{
+	display: none;
+}
+#comment{
+	max-width: 700px;
+	resize: none;
+	width: 100%;
+	height: 200px;
+	margin: 0 auto;
+}
+#reply-title{
+	margin-bottom: 10px;
+}
+.logged-in-as{
+	margin-bottom: 10px;
+	max-width: 700px;
 
+}
+#submit{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-weight: bold;
+	color: #fff;
+	font-family: "游ゴシック", sans-serif;
+	background-color: #106dab;
+	border-style: none;
+	box-shadow: 2px 2px 5px #808080;
+	border-radius: 5px;
+	height: 40px;
+	width: 120px;
+	font-size: 15px;
+}
+
+.comment-body{
+	margin-bottom: 20px;
+}
+.comments_template_box a{
+	    color: #1e73be;
+}
+.vcard{
+	margin-bottom: 30px;
+}
+.comment-content{
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.comment-edit-link{
+	margin-left: 10px;
+}
+.comment{
+	margin-bottom: 30px;
+}
+#submit:hover{
+	cursor: pointer;
+	transition: 0.5s;
+	opacity: 0.9;
+}
+#submit:active{
+	box-shadow: 0px 0px 0px #808080;
+}
+.form-submit{
+	text-align: center;
+	max-width: 700px;
+
+}
 @media screen and (max-width: 980px){
 
 
@@ -352,6 +433,17 @@
 	.singleBox{
 		width: 100%;
 		height: 100%;
+	}
+	.comments_template_smart_box{
+		display: block;
+		margin-top: 100px;
+	}
+	.comments_template_box{
+		display: none;
+	}
+	#comment{
+		width: 95%;
+		margin-left: 5px;
 	}
 	.nav_links{
 		display: none;

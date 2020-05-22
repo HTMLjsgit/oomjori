@@ -24,6 +24,7 @@
 				<h1>記事が見つかりませんでした。</h1>
 			<?php endif; ?>
 		</div>
+		<!-- スマートフォンだった場合 -->
 		<div class="smart_nav_links">
 			<div class="nav_previous">
 				<?php previous_posts_link(); ?>
@@ -34,6 +35,7 @@
 		</div>
 		<?php get_sidebar(); ?>
 	</div>
+		<!-- スマートフォンじゃなかったら場合 -->
 	<div class="nav_links">
 		<div class="nav_previous">
 			<?php previous_posts_link(); ?>

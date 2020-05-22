@@ -16,6 +16,13 @@
 		  	  </div>
 		  <?php endwhile;?>
 		<?php endif; ?>
-		<?php get_sidebar(); ?>
+		<div class="comments_template_smart_box">
+			<?php comments_template(); ?>
+		</div>
+		<?php get_sidebar(); ?>		
+	</div>
+	<div class="comments_template_box">
+		<?php comments_template(); ?>
 	</div>
 <?php get_footer(); ?>
+

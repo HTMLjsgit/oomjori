@@ -17,6 +17,16 @@
 	function twpp_change_excerpt_more($more){
 		return '...';
 	}
+	function comment_format($comment, $args, $depth){
+		echo "<div class='comment-get-avatar'>" . get_avatar($comment,50) . "</div>";
+		echo "<div class='comment-author'>" . comment_author() . "</div>";
+		echo "<div class='comment-date'>" . comment_date() . "</div>";
+		echo  "<div class='comment-edit'>" . edit_comment_link('コメントを編集') . "</div>";
+		echo "<div class='comment-text'>" . comment_text() . "</div>";
+		echo "<div class='comment-reply'>" . comment_reply_link( array_merge( $args, array( 'reply_text' => '返信する', 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ) . "</div>";
+	}
+
 	add_filter('excerpt_length', 'custom_excerpt_length', 999);
 	add_filter('excerpt_more', 'twpp_change_excerpt_more');
+	
 ?>
