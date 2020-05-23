@@ -27,9 +27,9 @@
 				echo "<div class='comment-author'>";
 						echo comment_author();
 				echo "</div>";
-
+				echo "<div class='borderbox'></div>";
 				echo "<div class='comment-date'>";
-				 		echo comment_date();  
+				 		echo  comment_date();  
 				echo "</div>";
 			echo "</div>";
 
@@ -40,15 +40,27 @@
 			echo "<div class='comment-text'>";
 			 		echo comment_text();
 			echo "</div>";
-
 			echo "<div class='comment-reply'>";
 				echo "<div class='backgroundimage_return_message'></div>";
-			 	echo comment_reply_link( array_merge( $args, array( 'reply_text' => '返信する', 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) );
+					// echo "<li id='comment-$comment->comment_ID' class='commentli'>";
+						// echo "<span class='reply'>";
+				 	echo comment_reply_link( array_merge( $args, array( 'reply_text' => '返信する', 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) );
+				 		// echo "</span>";
+				 	// echo "</li>";
 			echo "</div>";
 		echo "</div>";
 	}
 
+
 	add_filter('excerpt_length', 'custom_excerpt_length', 999);
 	add_filter('excerpt_more', 'twpp_change_excerpt_more');
 	
+	function comment_js_queue(){
+	  if ( (is_single() && comments_open() && get_option('thread_comments')) ){
+	    wp_enqueue_script( 'comment-reply' );
+	  }else{
+	    wp_deregister_script('comment-reply');
+	  }
+	}
+	add_action('wp_footer','comment_js_queue');
 ?>
