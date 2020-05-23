@@ -18,12 +18,34 @@
 		return '...';
 	}
 	function comment_format($comment, $args, $depth){
-		echo "<div class='comment-get-avatar'>" . get_avatar($comment,50) . "</div>";
-		echo "<div class='comment-author'>" . comment_author() . "</div>";
-		echo "<div class='comment-date'>" . comment_date() . "</div>";
-		echo  "<div class='comment-edit'>" . edit_comment_link('コメントを編集') . "</div>";
-		echo "<div class='comment-text'>" . comment_text() . "</div>";
-		echo "<div class='comment-reply'>" . comment_reply_link( array_merge( $args, array( 'reply_text' => '返信する', 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ) . "</div>";
+		echo "<div class='comment-list-box'>";
+			echo "<div class='profileBox'>";
+				echo "<div class='comment-get-avatar'>";
+						echo get_avatar($comment,50);
+				echo "</div>";
+
+				echo "<div class='comment-author'>";
+						echo comment_author();
+				echo "</div>";
+
+				echo "<div class='comment-date'>";
+				 		echo comment_date();  
+				echo "</div>";
+			echo "</div>";
+
+			echo "<div class='comment-edit'>";
+					echo edit_comment_link('コメントを編集'); 
+			echo "</div>";
+
+			echo "<div class='comment-text'>";
+			 		echo comment_text();
+			echo "</div>";
+
+			echo "<div class='comment-reply'>";
+				echo "<div class='backgroundimage_return_message'></div>";
+			 	echo comment_reply_link( array_merge( $args, array( 'reply_text' => '返信する', 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) );
+			echo "</div>";
+		echo "</div>";
 	}
 
 	add_filter('excerpt_length', 'custom_excerpt_length', 999);
