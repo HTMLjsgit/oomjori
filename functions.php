@@ -29,7 +29,7 @@
 				echo "</div>";
 				echo "<div class='borderbox'></div>";
 				echo "<div class='comment-date'>";
-				 		echo  comment_date();  
+				 		echo comment_date();  
 				echo "</div>";
 			echo "</div>";
 
@@ -44,7 +44,7 @@
 				echo "<div class='backgroundimage_return_message'></div>";
 					// echo "<li id='comment-$comment->comment_ID' class='commentli'>";
 						// echo "<span class='reply'>";
-				 	echo comment_reply_link( array_merge( $args, array( 'reply_text' => '返信する', 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) );
+				 	echo comment_reply_link( array_merge( $args, array( 'reply_text' => '返信する', 'depth' => $depth, 'max_depth' => $args['max_depth'])));
 				 		// echo "</span>";
 				 	// echo "</li>";
 			echo "</div>";
