@@ -4,6 +4,7 @@
 		  <?php while( have_posts() ) : the_post(); ?>
 		      <div class="singleBox">
 		      	<h5 class="dateText"><?php echo get_the_date(); ?></h5>
+		      	<p class="tagText"><?php echo the_tags(); ?></p>
 			    <h1 class="singleTitleText"><?php the_title(); ?></h1>
 				<div class="thumbnailsingleBox">
 			      <?php if (has_post_thumbnail()) : ?>
